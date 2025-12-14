@@ -1,0 +1,298 @@
+/* --- Ogólne ustawienia i reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4e4bc; /* Kolor piasku */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ANIMACJA LOGO I TYTUŁU --- */
+@keyframes glowPulse {
+    0% { transform: scale(1); text-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+    50% { transform: scale(1.05); text-shadow: 2px 2px 15px #d4af37; color: #8b4513; }
+    100% { transform: scale(1); text-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+}
+
+header {
+    background-color: #3e2723;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #d4af37; /* Złoty pasek */
+}
+
+.anim-logo {
+    animation: glowPulse 3s infinite; /* Zapętlona animacja */
+    font-size: 2.5em;
+    cursor: default;
+}
+
+/* --- MENU --- */
+/* Animacja dla linków menu */
+@keyframes menuHover {
+    0% { background-color: #5d4037; }
+    50% { background-color: #d4af37; color: #000; }
+    100% { background-color: #5d4037; }
+}
+
+nav {
+    background-color: #5d4037;
+    padding: 10px;
+    position: sticky; /* Menu przyklejone u góry */
+    top: 0;
+    z-index: 100;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s;
+}
+
+.menu-list li a:hover {
+    background-color: #d4af37;
+    color: #3e2723;
+    border-radius: 5px;
+}
+
+/* --- UKŁAD STRONY (Kontener) --- */
+.container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sekcje treści */
+.content-block, .media-block, .form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #8b4513;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- GALERIA AUTOMATYCZNA (CSS ONLY) --- */
+.gallery-section {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* 3 zdjęcia */
+    animation: slideShow 12s infinite; /* Automatyczne przewijanie */
+}
+
+.slide {
+    width: 33.33%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slideShow {
+    0% { margin-left: 0; }
+    30% { margin-left: 0; }
+    33% { margin-left: -100%; }
+    63% { margin-left: -100%; }
+    66% { margin-left: -200%; }
+    96% { margin-left: -200%; }
+    100% { margin-left: 0; }
+}
+
+/* --- TABELA --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #8b4513;
+}
+
+th {
+    background-color: #d4af37;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* --- FORMULARZ --- */
+.form-section {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+input[type=text], input[type=number], select {
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #3e2723;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-reset {
+    background-color: #d32f2f;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    background-color: #fff8e1;
+    padding: 20px;
+    border: 2px dashed #d4af37;
+    border-radius: 8px;
+}
+
+/* --- STOPKA --- */
+footer {
+    background-color: #3e2723;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   RESPONSYWNOŚĆ (MEDIA QUERIES) - 3 UKŁADY
+   ========================================= */
+
+/* 1. UKŁAD NA KOMPUTERY (> 1200px) */
+@media (min-width: 1201px) {
+    .container {
+        grid-template-columns: 2fr 1fr; /* Główna treść szeroka, panel wąski */
+    }
+    
+    /* Menu dla PC: Poziome, wyjustowane do prawej, eleganckie */
+    .menu-list {
+        justify-content: flex-end;
+    }
+    
+    .menu-list li a {
+        border-bottom: 2px solid transparent;
+    }
+    
+    .menu-list li a:hover {
+        background-color: transparent;
+        color: #d4af37;
+        border-bottom: 2px solid #d4af37;
+    }
+}
+
+/* 2. UKŁAD NA TABLETY (> 600px i < 1200px) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        background-color: #e6ceaa; /* Nieco ciemniejszy piasek dla odróżnienia */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Jedna kolumna */
+    }
+    
+    /* Sidebar przesuwa się na dół, ale jest widoczny */
+    .sidebar {
+        order: 2;
+    }
+    
+    /* Menu dla Tabletów: Wyśrodkowane "tabletki" (pills) */
+    .menu-list {
+        justify-content: center;
+    }
+    
+    .menu-list li a {
+        background-color: #4e342e;
+        margin: 0 5px;
+        border-radius: 20px;
+    }
+}
+
+/* 3. UKŁAD NA TELEFONY (< 600px) */
+@media (max-width: 600px) {
+    .container {
+        display: block; /* Zwykły blok */
+        padding: 5px;
+    }
+
+    /* ZNACZĄCA ZMIANA: Blok Sidebar ZNIKA całkowicie */
+    .sidebar {
+        display: none; 
+    }
+
+    /* Menu dla Telefonów: Pionowa lista, rozciągnięta */
+    .menu-list {
+        flex-direction: column;
+        background-color: #2d1b18;
+    }
+
+    .menu-list li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #4e342e;
+    }
+
+    .menu-list li a {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    /* Zmiana układu galerii na telefonie */
+    h1.anim-logo {
+        font-size: 1.5em;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

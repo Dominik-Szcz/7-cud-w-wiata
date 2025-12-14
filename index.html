@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Twoje Imię i Nazwisko">
+    <meta name="keywords" content="7 cudów świata, piramidy, historia, starożytność">
+    <meta name="description" content="Strona o 7 cudach świata starożytnego">
+    <title>7 Cudów Świata Starożytnego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1 class="anim-logo">7 CUDÓW ŚWIATA</h1>
+            <p>Podróż do starożytności</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu-list">
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#lista">Lista Cudów</a></li>
+            <li><a href="#tabela">Porównanie</a></li>
+            <li><a href="#ankieta">Ankieta</a></li>
+            <li><a href="https://pl.wikipedia.org/wiki/Siedem_cudów_świata" target="_blank">Więcej (Wikipedia)</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            
+            <section id="galeria" class="gallery-section">
+                <h2>Galeria Zdjęć</h2>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide"><img src="media/foto1.jpg" alt="Piramida Cheopsa"></div>
+                        <div class="slide"><img src="media/foto4.jpg" alt="Wiszące Ogrody"></div>
+                        <div class="slide"><img src="media/foto3.jpg" alt="Latarnia na Faros"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="lista" class="content-block">
+                <h2>Cuda Świata Starożytnego</h2>
+                <p>Oto lista najbardziej znanych budowli antyku:</p>
+                <ol>
+                    <li><strong>Piramida Cheopsa</strong> - jedyny cud, który przetrwał do dziś.</li>
+                    <li><strong>Wiszące Ogrody Semiramidy</strong> - stworzone w Babilonie.</li>
+                    <li><strong>Świątynia Artemidy w Efezie</strong>.</li>
+                    <li><strong>Posąg Zeusa w Olimpii</strong>.</li>
+                    <li><strong>Mauzoleum w Halikarnasie</strong>.</li>
+                    <li><strong>Kolos Rodyjski</strong>.</li>
+                    <li><strong>Latarnia morska na Faros</strong>.</li>
+                </ol>
+            </section>
+
+            <section id="tabela" class="content-block">
+                <h2>Dane techniczne (Tabela)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nazwa</th>
+                            <th>Miejsce</th>
+                            <th>Data budowy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Piramida Cheopsa</td>
+                            <td>Giza, Egipt</td>
+                            <td>ok. 2560 p.n.e.</td>
+                        </tr>
+                        <tr>
+                            <td>Kolos Rodyjski</td>
+                            <td>Rodos, Grecja</td>
+                            <td>292-280 p.n.e.</td>
+                        </tr>
+                        <tr>
+                            <td>Posąg Zeusa</td>
+                            <td>Olimpia, Grecja</td>
+                            <td>435 p.n.e.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="media-block">
+                <h2>Multimedia: Poznaj Tajemnicę Piramidy</h2>
+    <div class="video-container">
+        <p>Film z kanału National Geographic Polska:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PfiYBLTHwV0?si=ge1S4sYjtIX4QDwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+                <div class="audio-container">
+                    <p>Klimatyczna muzyka:</p>
+                    <audio controls>
+                        <source src="media/Ancient Arabian Music – Cobra Desert.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="sidebar">
+            <h3>Ciekawostka</h3>
+            <p>Czy wiesz, że lista siedmiu cudów świata była rodzajem przewodnika turystycznego dla starożytnych podróżników w basenie Morza Śródziemnego?</p>
+            
+            <h3>Lokalizacja Piramidy</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.578663866164!2d31.13201361511409!3d29.97923458190612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584587ac8f291b%3A0x810c2f3fa2a52424!2sThe%20Great%20Pyramid%20of%20Giza!5e0!3m2!1sen!2spl!4v1621234567890!5m2!1sen!2spl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </aside>
+    </div>
+
+    <section id="ankieta" class="form-section">
+        <h2>Ankieta dla zwiedzających</h2>
+        <form action="#" method="post">
+            <label>Twój ulubiony cud:</label><br>
+            <input type="text" name="ulubiony" placeholder="Wpisz nazwę..."><br><br>
+
+            <label>Ile cudów już znasz?</label><br>
+            <input type="number" name="liczba" min="0" max="7"><br><br>
+
+            <label>Czy strona Ci się podoba?</label><br>
+            <input type="radio" name="ocena" value="tak" checked> Tak
+            <input type="radio" name="ocena" value="nie"> Nie<br><br>
+
+            <label>Skąd o nas wiesz?</label><br>
+            <select name="zrodlo">
+                <option value="internet">Z Internetu</option>
+                <option value="szkola">Ze szkoły</option>
+                <option value="znajomi">Od znajomych</option>
+            </select><br><br>
+
+            <input type="submit" value="Wyślij" class="btn">
+            <input type="reset" value="Wyczyść" class="btn btn-reset">
+        </form>
+    </section>
+
+    <footer>
+        <p>Autor: <strong>Twoje Imię i Nazwisko</strong> | Klasa: <strong>Twoja Klasa</strong></p>
+        <p>&copy; 2023 Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
